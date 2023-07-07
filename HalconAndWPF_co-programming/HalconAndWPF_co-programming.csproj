@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<RootNamespace>HalconAndWPF_co_programming</RootNamespace>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<Reference Include="halcondotnet">
+			<HintPath>..\..\..\..\Program Files\MVTec\HALCON-21.11-Progress\bin\dotnet35\halcondotnet.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+	<ItemGroup>
+		<ContentWithTargetPath Include="DLL\halcon.dll">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<TargetPath>halcon.dll</TargetPath>
+		</ContentWithTargetPath>
+		<ContentWithTargetPath Include="DLL\hcanvas.dll">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<TargetPath>hcanvas.dll</TargetPath>
+		</ContentWithTargetPath>
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="Images\board-01.png">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Images\board-20.png">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+</Project>
